@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="615.0" prefWidth="960.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="metodosnumericos.FXMLJacobiController">
+   <children>
+      <AnchorPane prefHeight="615.0" prefWidth="960.0" styleClass="background">
+         <children>
+            <Label layoutX="387.0" layoutY="71.0" styleClass="label-header" text="Método de Jacobi" />
+            <TextArea fx:id="taInput" layoutX="302.0" layoutY="140.0" prefHeight="89.0" prefWidth="341.0" />
+            <Button layoutX="655.0" layoutY="140.0" mnemonicParsing="false" onAction="#calc" prefHeight="52.0" prefWidth="78.0" text="Calcular" />
+            <TableView fx:id="tvA" layoutX="216.0" layoutY="299.0" prefHeight="200.0" prefWidth="200.0" style=": ;">
+               <styleClass>
+                  <String fx:value="matrix-brackets" />
+                  <String fx:value="noheader" />
+                  <String fx:value="simple-table" />
+               </styleClass>
+            </TableView>
+            <TableView fx:id="tvB" layoutX="491.0" layoutY="299.0" prefHeight="200.0" prefWidth="106.0">
+               <styleClass>
+                  <String fx:value="noheader" />
+                  <String fx:value="simple-table" />
+                  <String fx:value="matrix-brackets" />
+               </styleClass>
+            </TableView>
+            <Label layoutX="573.0" layoutY="379.0" styleClass="brackets" />
+            <TableView fx:id="tvX" layoutX="676.0" layoutY="299.0" prefHeight="200.0" prefWidth="112.0">
+               <styleClass>
+                  <String fx:value="noheader" />
+                  <String fx:value="simple-table" />
+                  <String fx:value="matrix-brackets" />
+               </styleClass>
+            </TableView>
+            <Button layoutX="655.0" layoutY="198.0" mnemonicParsing="false" onAction="#clean" prefHeight="31.0" prefWidth="79.0" text="Limpiar" />
+            <Label layoutX="169.0" layoutY="315.0" styleClass="label-results" text="A = " />
+            <Label layoutX="448.0" layoutY="315.0" styleClass="label-results" text="B = " />
+            <Label layoutX="632.0" layoutY="315.0" styleClass="label-results" text="X = " />
+            <ImageView fitHeight="224.0" fitWidth="20.0" layoutX="211.0" layoutY="288.0">
+               <image>
+                  <Image url="@rec/brack1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="224.0" fitWidth="22.0" layoutX="400.0" layoutY="288.0">
+               <image>
+                  <Image url="@rec/brack2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="224.0" fitWidth="20.0" layoutX="488.0" layoutY="288.0">
+               <image>
+                  <Image url="@rec/brack1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="224.0" fitWidth="20.0" layoutX="669.0" layoutY="288.0">
+               <image>
+                  <Image url="@rec/brack1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="224.0" fitWidth="22.0" layoutX="579.0" layoutY="288.0">
+               <image>
+                  <Image url="@rec/brack2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="224.0" fitWidth="22.0" layoutX="770.0" layoutY="288.0">
+               <image>
+                  <Image url="@rec/brack2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

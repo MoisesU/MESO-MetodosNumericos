@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="615.0" prefWidth="960.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="metodosnumericos.FXMLIntegInterpolController">
+   <children>
+      <AnchorPane prefHeight="615.0" prefWidth="960.0" styleClass="background" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="296.0" layoutY="78.0" styleClass="label-header" text="Integración por Interpolación" />
+            <AnchorPane fx:id="paneStat" layoutX="505.0" layoutY="332.0" prefHeight="52.0" prefWidth="361.0">
+               <children>
+                  <Label layoutY="13.0" prefHeight="25.0" prefWidth="206.0" styleClass="label-bright" text="Utilizando un polinomio de" />
+                  <ComboBox fx:id="grade" layoutX="206.0" layoutY="12.0" prefHeight="26.0" prefWidth="143.0" />
+               </children>
+            </AnchorPane>
+            <TextField fx:id="tfLimA" layoutX="524.0" layoutY="290.0" prefHeight="31.0" prefWidth="84.0" />
+            <Label fx:id="lbResult" layoutX="537.0" layoutY="477.0" prefHeight="27.0" prefWidth="298.0" styleClass="label-results" />
+            <Label layoutX="506.0" layoutY="433.0" text="El resultado es aproximadamente igual a " />
+            <TextField fx:id="tfLimB" layoutX="524.0" layoutY="165.0" prefHeight="31.0" prefWidth="84.0" />
+            <Button layoutX="591.0" layoutY="391.0" mnemonicParsing="false" onAction="#calc" prefHeight="31.0" prefWidth="190.0" text="Calcular" />
+            
+                  <TableView fx:id="tvFTab" layoutX="150.0" layoutY="161.0" prefHeight="191.0" prefWidth="172.0">
+               <columns>
+                  <TableColumn prefWidth="84.0" text="X" />
+                  <TableColumn prefWidth="84.0" text="Y" />
+               </columns>
+            </TableView>
+            <Button layoutX="150.0" layoutY="448.0" mnemonicParsing="false" onAction="#clean" prefHeight="31.0" prefWidth="84.0" text="Limpiar" />
+            <TextField fx:id="tfX" layoutX="150.0" layoutY="370.0" onKeyPressed="#change" prefHeight="31.0" prefWidth="84.0" />
+            <TextField fx:id="tfY" layoutX="238.0" layoutY="370.0" onKeyPressed="#change2" prefHeight="31.0" prefWidth="84.0" />
+            <Button layoutX="150.0" layoutY="408.0" mnemonicParsing="false" onAction="#add" prefHeight="31.0" prefWidth="173.0" text="Agregar" />
+            <Line endY="400.0" layoutX="400.0" layoutY="134.0" stroke="#ffffffe5" />
+            <Button fx:id="btnDel" layoutX="240.0" layoutY="448.0" mnemonicParsing="false" onAction="#delete" prefHeight="31.0" prefWidth="84.0" text="Eliminar" />
+            <ImageView fitHeight="162.0" fitWidth="24.0" layoutX="491.0" layoutY="161.0">
+               <image>
+                  <Image url="@rec/integ.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblFunc" layoutX="537.0" layoutY="202.0" prefHeight="84.0" prefWidth="368.0" styleClass="label-function" text="f(x) dx" wrapText="true" />
+         
+         </children>
+         
+      </AnchorPane>
+   </children>
+</AnchorPane>

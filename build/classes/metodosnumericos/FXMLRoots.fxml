@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="615.0" prefWidth="960.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="metodosnumericos.FXMLRootsController">
+   <children>
+      <TabPane prefHeight="615.0" prefWidth="960.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab style=": times new roman;" styleClass="background" text="Calculo">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="background">
+                     <children>
+                        <Label layoutX="231.0" layoutY="57.0" styleClass="label-header" text="Aproximaciones de Raices Cuadradas" />
+                        <Button layoutX="617.0" layoutY="152.0" mnemonicParsing="false" onAction="#calcular" prefHeight="31.0" prefWidth="87.0" text="Calcular" />
+                        <Label fx:id="lblError" layoutX="336.0" layoutY="423.0" prefHeight="27.0" prefWidth="300.0" styleClass="label-results" text="" textFill="WHITE" />
+                        <Label fx:id="lblRoot" layoutX="334.0" layoutY="301.0" prefHeight="27.0" prefWidth="300.0" styleClass="label-results" text="">
+                           <font>
+                              <Font name="Consolas" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="338.0" layoutY="361.0" text="Con un error de: " />
+                        <Label layoutX="338.0" layoutY="241.0" text="La raiz es aproximadamente igual a: " />
+                        <TextField fx:id="tfNum" layoutX="378.0" layoutY="152.0" prefHeight="30.0" prefWidth="217.0" text="" />
+                        <Label layoutX="219.0" layoutY="156.0" prefHeight="21.0" prefWidth="125.0" styleClass="label-bright" text="Raiz cuadrada de" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Tabla de aproximaciones">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="background">
+                     <children>
+                        <TableView fx:id="tvRoot" layoutX="58.0" layoutY="83.0" prefHeight="452.0" prefWidth="847.0">
+                          <columns>
+                            <TableColumn prefWidth="118.0" text="n" />
+                            <TableColumn prefWidth="240.0" text="xn" />
+                            <TableColumn prefWidth="240.0" text="Xn+1" />
+                            <TableColumn prefWidth="240.0" text="Error" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+               </content></Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

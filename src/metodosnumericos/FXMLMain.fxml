@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="mainPane" prefHeight="640.0" prefWidth="960.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="metodosnumericos.FXMLMainController">
+   <children>
+      <MenuBar layoutY="-1.0" prefHeight="40.0" prefWidth="960.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#copyToCB" text="Copiar" />
+              <MenuItem mnemonicParsing="false" onAction="#Exit" text="Salir" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Método">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#openRoots" text="Aproximaciones de raices" />
+                  <Menu mnemonicParsing="false" text="Raices de Funciones">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#openBisection" text="Bisecciones" />
+                      <MenuItem mnemonicParsing="false" onAction="#openNewtonRaphson" text="Newton-Raphson" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Sistemas Lineales de Ecuaciones">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#openNewtonJacobi" text="Jacobi" />
+                        <MenuItem mnemonicParsing="false" onAction="#openGaussSeidel" text="Gauss-Seidel" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Interpolación">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#openSimpleInterpol" text="Simple" />
+                        <MenuItem mnemonicParsing="false" onAction="#openInterpolNewton" text="Polinomios de Newton" />
+                        <MenuItem mnemonicParsing="false" onAction="#openInterpolLagrange" text="Polinomios de Lagrange" />
+                        <MenuItem mnemonicParsing="false" onAction="#openEstadistica" text="Mínimos Cuadrados" />
+                        <MenuItem mnemonicParsing="false" onAction="#openInterpolSplin" text="Splines Cúbicos" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Integración Numérica">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#openUniformPart" text="Suma de Partición Uniforme " />
+                        <MenuItem mnemonicParsing="false" onAction="#openIntegInterpol" text="Integración por Interpolación" />
+                        <Menu mnemonicParsing="false" text="Métodos de Newton Cotes">
+                          <items>
+                              <MenuItem mnemonicParsing="false" onAction="#openTrapezium" text="Trapecio" />
+                            <MenuItem mnemonicParsing="false" onAction="#openSimpson13" text="Simpson 1/3" />
+                              <MenuItem mnemonicParsing="false" onAction="#openSimpson38" text="Simpson 3/8" />
+                          </items>
+                        </Menu>
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Ecuaciones Diferenciales">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#openEuler" text="Euler" />
+                        <MenuItem mnemonicParsing="false" onAction="#openUpgradeEuler" text="Euler Mejorado" />
+                    </items>
+                  </Menu>
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Configuración">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#setFix" text="Fix" />
+                  <MenuItem mnemonicParsing="false" onAction="#setNum" text="Número máximo de iteraciones" />
+                  <Menu mnemonicParsing="false" text="Integración por Integración">
+                    <items>
+                        <RadioMenuItem fx:id="rmSimp" mnemonicParsing="false" onAction="#switchMethod" text="Usar Interpol. Simple" />
+                        <RadioMenuItem fx:id="rmStat" mnemonicParsing="false" onAction="#switchMethod" text="Usar Interpol. Estadística" />
+                    </items>
+                  </Menu>
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Ayuda">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Acerca de..." />
+                  <MenuItem mnemonicParsing="false" onAction="#openManual" text="Manual de Usuario" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane fx:id="displayPane" layoutY="39.0" prefHeight="603.0" prefWidth="960.0" styleClass="background" />
+   </children>
+</AnchorPane>

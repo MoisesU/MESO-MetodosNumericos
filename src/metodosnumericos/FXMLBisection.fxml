@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="615.0" prefWidth="960.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="metodosnumericos.FXMLBisectionController">
+   <children>
+      <TabPane prefHeight="615.0" prefWidth="960.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab style=": times new roman;" styleClass="background" text="Calculo">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="background">
+                     <children>
+                        <Label layoutX="334.0" layoutY="66.0" styleClass="label-header" text="Método de Bisecciones" />
+                        <Button layoutX="581.0" layoutY="197.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="87.0" text="Calcular" onAction="#calcular" />
+                        <Label fx:id="lblError" layoutX="300.0" layoutY="448.0" prefHeight="27.0" prefWidth="361.0" styleClass="label-results" text="" textFill="WHITE" />
+                        <Label fx:id="lblRoot" layoutX="300.0" layoutY="329.0" prefHeight="27.0" prefWidth="361.0" styleClass="label-results" text="">
+                            <font>
+                              <Font name="Consolas" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="271.0" layoutY="407.0" text="Con un error de: " />
+                        <Label layoutX="271.0" layoutY="280.0" text="La raiz del polinomio es aproximadamente igual a: " />
+                        <TextField fx:id="tfFunc" layoutX="451.0" layoutY="154.0" prefHeight="15.0" prefWidth="217.0" text="" />
+                        <Label layoutX="292.0" layoutY="155.0" prefHeight="21.0" prefWidth="125.0" styleClass="label-bright" text="Sea f(x) =" />
+                        <TextField fx:id="tfInter" layoutX="464.0" layoutY="200.0" prefHeight="25.0" prefWidth="71.0" text="" />
+                        <Label layoutX="292.0" layoutY="202.0" prefHeight="21.0" prefWidth="125.0" styleClass="label-bright" text="en el intervalo" />
+                        <Label layoutX="452.0" layoutY="202.0" prefHeight="21.0" prefWidth="12.0" styleClass="label-bright" text="[" />
+                        <Label layoutX="541.0" layoutY="202.0" prefHeight="21.0" prefWidth="12.0" styleClass="label-bright" text="]" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Tabla de aproximaciones">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="background">
+                     <children>
+                        <TableView fx:id="tvRoot" layoutX="58.0" layoutY="83.0" prefHeight="452.0" prefWidth="847.0">
+                          <columns>
+                            <TableColumn prefWidth="64.0" text="n" />
+                            <TableColumn prefWidth="110.0" text="a" />
+                            <TableColumn prefWidth="110.0" text="Xm" />
+                            <TableColumn prefWidth="110.0" text="b" />
+                              <TableColumn prefWidth="112.0" text="f(a)" />
+                              <TableColumn prefWidth="112.0" text="f(b)" />
+                              <TableColumn prefWidth="112.0" text="f(Xm)" />
+                              <TableColumn prefWidth="111.0" text="Error" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+               </content></Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

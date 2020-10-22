@@ -1,0 +1,277 @@
+.background{
+  -fx-background-color: #0A2739;
+}          
+.menu-bar {
+    -fx-background-color: derive(#0A2739,20%);
+}
+
+.context-menu {
+    -fx-background-color: derive(#0A2739,50%);
+}
+
+.menu-bar .label{
+    -fx-font-size: 13pt;
+    -fx-font-family: "Microsoft sans serif";
+    -fx-text-fill: white;
+    -fx-opacity: 0.9;
+    
+     
+}
+.menu-bar{
+    -fx-padding: 3 0 0 0;
+    -fx-border-width: 0px 0px 2px 0px;
+    -fx-border-color: white;
+    -fx-border-style: solid;
+}
+
+.menu .left-container {
+    -fx-background-color: black;
+}
+
+.button{
+    -fx-background-color: #0A2739;
+    -fx-text-fill: white;
+    -fx-font-family: "Microsoft sans serif";
+    -fx-font-size: 11pt;
+    -fx-border-color: white;
+    -fx-border-style: solid;
+    -fx-border-radius: 0;
+    -fx-border-width: 2;
+}
+.button:focused {
+    -fx-border-color: white;
+    -fx-border-width: 2 2 2 2;
+    -fx-border-style: solid;
+    -fx-border-radius: 0;
+    -fx-border-insets: 1 1 1 1, 0;
+    -fx-focus-color: white;
+}
+
+.button:disabled, .button:default:disabled {
+    -fx-opacity: 0.3;
+    -fx-border-radius: 0px;
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: white;
+}
+
+.button:default {
+    -fx-background-color: -fx-focus-color;
+    -fx-border-radius: 0px;
+    -fx-text-fill: #ffffff;
+}
+
+.button:hover {
+    -fx-background-color: white;
+    -fx-border-radius: 0px;
+    -fx-text-fill: #0A2739;
+}
+.button:pressed {
+    -fx-background-color: white;
+    -fx-border-radius: 0px;
+    -fx-text-fill: #0A2739;
+    -fx-opacity: 0.6;
+}
+
+.label {
+    -fx-font-size: 14pt;
+    -fx-font-family: "Adobe Garamond Pro";
+    -fx-text-fill: white;
+    -fx-opacity: 0.6;
+}
+
+.label-bright {
+    -fx-font-size: 12pt;
+    -fx-font-family: "Adobe Garamond Pro Bold";
+    -fx-text-fill: white;
+    -fx-opacity: 1;
+}
+
+.label-option {
+    -fx-font-size: 10pt;
+    -fx-font-family: "Adobe Garamond Pro Bold";
+    -fx-text-fill: white;
+    -fx-opacity: 1;
+    -fx-text-alignment: CENTER;
+}
+
+.label-header {
+    -fx-font-family: "Microsoft YaHei Light";
+    -fx-text-fill: white;
+    -fx-opacity: 1;
+    -fx-font-size: 21pt;
+    -fx-letter-spacing: 2pt;
+    -fx-font-variant: small-caps; 
+}
+
+.label-results{
+  -fx-font-size: 16pt;
+  -fx-font-family: "Consolas";
+  -fx-font-weight: bold;
+  -fx-text-fill: white;
+  -fx-alignment: CENTER;
+  -fx-opacity: 1;
+}
+.label-function{
+  -fx-font-size: 16pt;
+  -fx-font-family: "Cambria";
+  -fx-text-fill: white;
+  -fx-alignment: CENTER_LEFT;
+  -fx-font-style: ITALIC;
+  -fx-opacity: 1;
+}
+
+.table-view {
+    -fx-base: #0A2739;
+    -fx-control-inner-background: #0A2739;
+    -fx-background-color: #0A2739;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 5;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 35;
+    -fx-border-width: 0 0 1 0;
+    -fx-background-color: transparent;
+    -fx-border-color: 
+        transparent
+        transparent
+        derive(#0A2739, 80%) 
+        transparent;
+    -fx-border-insets: 0 10 1 0;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 20pt;
+    -fx-font-family: "Microsoft YaHei Light";
+    -fx-text-fill: white;
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: #087ba5;
+}
+
+.split-pane:horizontal > .split-pane-divider {
+    -fx-border-color: transparent #1d1d1d transparent #1d1d1d;
+    -fx-background-color: transparent, derive(#1d1d1d,20%);
+}
+
+.split-pane {
+    -fx-padding: 1 0 0 0;
+}
+              
+.text-field, .combo-box {
+    -fx-font-size: 11pt;
+    -fx-font-family: "Mirosoft sans serif";
+    -fx-border-radius: 0px;
+    -fx-background-color: white;
+}
+.text-area {
+    -fx-font-size: 12pt;
+    -fx-font-family: "Cambria";
+    -fx-border-radius: 0px;
+    -fx-background-color: white;
+    -fx-font-style: ITALIC;
+}
+
+.menu .left-container {
+    -fx-background-color: black;
+}
+
+.tab{
+    -fx-background-insets: 0 1 0 1,0,0;
+}
+.tab-pane .tab
+{
+    -fx-background-color: derive(#0A2739,20%);
+
+}
+
+.tab-pane .tab:selected
+{
+    -fx-background-color: #0A2739;
+}
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
+}
+
+.tab .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: white;
+    -fx-font-size: 11pt;
+    -fx-font-family: "Microsoft sans serif";
+    -fx-opacity: 0.9;
+}
+
+.tab:selected .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: white;
+    -fx-font-size: 11pt;
+    -fx-font-family: "Microsoft sans serif";
+    -fx-opacity: 0.6;
+}
+.brackets{
+    -fx-font-size: 20pt; 
+}
+
+.noheader .column-header-background {
+    -fx-max-height: 0;
+    -fx-pref-height: 0;
+    -fx-min-height: 0;
+}
+
+.simple-table .table-row-cell:filled:focused:selected{
+    -fx-alignment: CENTER;
+    -fx-font-size: 10pt;
+    -fx-font-family: "Microsoft sans serif";
+    -fx-border-width: 0;
+    -fx-background-color: #087ba5;
+}
+
+.matrix-brackets {
+    -fx-border-width: 0 2px 0 2px;
+    -fx-border-color: white;
+}
+
+.progress-bar {
+    -fx-skin: "com.sun.javafx.scene.control.skin.ProgressBarSkin";
+    -fx-background-color:
+        -fx-box-border,
+        linear-gradient(to bottom, derive(-fx-color,30%) 5%, derive(-fx-color,-17%));
+    -fx-background-insets: 0, 1;
+    -fx-indeterminate-bar-length: 60;
+    -fx-indeterminate-bar-escape: true;
+    -fx-indeterminate-bar-flip: true;
+    -fx-indeterminate-bar-animation-time: 2;
+}
+
+.progress-bar .bar {
+    -fx-background-color:
+        -fx-box-border,
+        linear-gradient(to bottom, derive(-fx-accent,95%), derive(-fx-accent,10%)),
+        linear-gradient(to bottom, derive(-fx-accent,38%), -fx-accent);
+    -fx-background-insets: 0, 1, 2;
+    -fx-padding: 0.416667em; /* 5 */
+}
+
+.progress-bar:indeterminate .bar {
+    -fx-background-color: linear-gradient(to left, transparent, -fx-accent);
+}
+
+.progress-bar .track {
+     -fx-background-color:
+        -fx-box-border,
+        linear-gradient(to bottom, derive(-fx-color,-15%), derive(-fx-color,2.2%) 20%, derive(-fx-color,60%));
+    -fx-background-insets:  0, 1;
+}
+
+.progress-bar:disabled {
+    -fx-opacity: -fx-disabled-opacity;
+}

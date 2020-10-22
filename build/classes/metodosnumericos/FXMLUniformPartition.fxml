@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="615.0" prefWidth="960.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="metodosnumericos.FXMLUniformPartitionController">
+   <children>
+      <TabPane prefHeight="615.0" prefWidth="960.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab style=": times new roman;" styleClass="background" text="Calculo">
+               <content>
+                   <AnchorPane prefHeight="615.0" prefWidth="960.0" styleClass="background" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                       <Label layoutX="201.0" layoutY="80.0" styleClass="label-header" text="Integración por Suma de Partición Uniforme" />
+                       <Button layoutX="574.0" layoutY="335.0" mnemonicParsing="false" onAction="#calc" prefHeight="31.0" prefWidth="101.0" text="Calcular" />
+                       <TextField fx:id="tfLimB" layoutX="319.0" layoutY="151.0" prefHeight="31.0" prefWidth="84.0" />
+                       <Label layoutX="311.0" layoutY="395.0" text="El resultado es aproximadamente igual a " />
+                       <Label fx:id="lbResult" layoutX="331.0" layoutY="435.0" prefHeight="27.0" prefWidth="298.0" styleClass="label-results" />
+                       <TextField fx:id="tfLimA" layoutX="319.0" layoutY="275.0" prefHeight="31.0" prefWidth="84.0" />
+                        <TextField fx:id="tfFunc" layoutX="340.0" layoutY="213.0" prefHeight="31.0" prefWidth="307.0" />
+                        <Label layoutX="287.0" layoutY="338.0" styleClass="label-bright" text="Utilizando " />
+                        <TextField fx:id="tfSquares" layoutX="374.0" layoutY="335.0" prefHeight="31.0" prefWidth="84.0" />
+                        <Label layoutX="473.0" layoutY="338.0" styleClass="label-bright" text="cuadrados" />
+                        <Button layoutX="685.0" layoutY="335.0" mnemonicParsing="false" onAction="#clean" prefHeight="31.0" prefWidth="74.0" text="Limpiar" />
+                        <Label layoutX="652.0" layoutY="216.0" style="-fx-font-style: ITALIC;" styleClass="label-function" text="dx" />
+                        <ImageView fitHeight="177.0" fitWidth="24.0" layoutX="288.0" layoutY="140.0">
+                           <image>
+                              <Image url="@rec/integ.png" />
+                           </image>
+                        </ImageView>
+                    </children>
+                 </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Tabla">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="background">
+                     <children>
+                        <TableView fx:id="tvRoot" layoutX="58.0" layoutY="83.0" prefHeight="452.0" prefWidth="847.0">
+                        </TableView>
+                     </children></AnchorPane>
+               </content></Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="615.0" prefWidth="960.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="metodosnumericos.FXMLInterpolSplinController">
+   <children>
+      <AnchorPane prefHeight="615.0" prefWidth="960.0" styleClass="background">
+         <children>
+            <Label layoutX="269.0" layoutY="81.0" styleClass="label-header" text="Interpolación por Splines Cúbicos" />
+            <Button layoutX="720.0" layoutY="185.0" mnemonicParsing="false" onAction="#calc" text="Calcular" />
+            <TableView fx:id="tvFTab" layoutX="227.0" layoutY="161.0" prefHeight="191.0" prefWidth="172.0">
+               <columns>
+                  <TableColumn prefWidth="84.0" text="X" />
+                  <TableColumn prefWidth="84.0" text="Y" />
+               </columns>
+            </TableView>
+            <Button layoutX="227.0" layoutY="448.0" mnemonicParsing="false" onAction="#clean" prefHeight="31.0" prefWidth="84.0" text="Limpiar" />
+            <Label layoutX="149.0" layoutY="193.0" prefHeight="27.0" prefWidth="65.0" text="f(x) = " />
+            <Label layoutX="522.0" layoutY="188.0" prefHeight="25.0" prefWidth="91.0" styleClass="label-bright" text="Obtener   f(" />
+            <TextField fx:id="tfX" layoutX="227.0" layoutY="370.0" onKeyPressed="#change" prefHeight="31.0" prefWidth="84.0" />
+            <TextField fx:id="tfY" layoutX="315.0" layoutY="370.0" onKeyPressed="#change2" prefHeight="31.0" prefWidth="84.0" />
+            <Button layoutX="227.0" layoutY="408.0" mnemonicParsing="false" onAction="#add" prefHeight="31.0" prefWidth="173.0" text="Agregar" />
+            <Line endY="400.0" layoutX="447.0" layoutY="134.0" stroke="#ffffffe5" />
+            <TextField fx:id="tfValue" layoutX="609.0" layoutY="185.0" prefHeight="31.0" prefWidth="84.0" />
+            <Label layoutX="695.0" layoutY="188.0" prefHeight="25.0" prefWidth="10.0" styleClass="label-bright" text=")" />
+            <Label layoutX="509.0" layoutY="251.0" text="El valor es aproximadamente igual a " />
+            <Label fx:id="lbResult" layoutX="511.0" layoutY="302.0" prefHeight="27.0" prefWidth="298.0" styleClass="label-results" />
+            <Button fx:id="btnDel" layoutX="315.0" layoutY="448.0" mnemonicParsing="false" onAction="#delete" prefHeight="31.0" prefWidth="84.0" text="Eliminar" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

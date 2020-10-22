@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="615.0" prefWidth="960.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="metodosnumericos.FXMLEulerController">
+   <children>
+      <AnchorPane prefHeight="615.0" prefWidth="960.0" styleClass="background">
+         <children>
+            <Label layoutX="383.0" layoutY="52.0" prefHeight="60.0" prefWidth="214.0" styleClass="label-header" text="Método de Euler" />
+            <Label layoutX="183.0" layoutY="162.0" styleClass="label-bright" text="dy/dx = " />
+            <TextField fx:id="tfFunc" layoutX="253.0" layoutY="160.0" prefHeight="31.0" prefWidth="192.0" />
+            <Label layoutX="479.0" layoutY="163.0" styleClass="label-bright" text="y ( " />
+            <TextField fx:id="tfX" layoutX="501.0" layoutY="160.0" prefHeight="31.0" prefWidth="66.0" />
+            <Label layoutX="566.0" layoutY="163.0" styleClass="label-bright" text=" ) = " />
+            <TextField fx:id="tfY" layoutX="600.0" layoutY="160.0" prefHeight="31.0" prefWidth="66.0" />
+            <TextField fx:id="tfH" layoutX="543.0" layoutY="205.0" prefHeight="31.0" prefWidth="66.0" />
+            <Label layoutX="514.0" layoutY="209.0" styleClass="label-bright" text="h = " />
+            <Label layoutX="243.0" layoutY="208.0" styleClass="label-bright" text="Número de términos = " />
+            <TextField fx:id="tfNumT" layoutX="410.0" layoutY="205.0" prefHeight="31.0" prefWidth="66.0" />
+            <Button layoutX="685.0" layoutY="160.0" mnemonicParsing="false" onAction="#calc" text="Calcular" />
+            <Button layoutX="685.0" layoutY="205.0" mnemonicParsing="false" onAction="#clean" prefHeight="31.0" prefWidth="78.0" text="Limpiar" />
+            <TableView fx:id="tvTable" layoutX="66.0" layoutY="277.0" prefHeight="313.0" prefWidth="848.0">
+              <columns>
+                <TableColumn prefWidth="76.0" text="n" />
+                <TableColumn prefWidth="96.0" text="Xn" />
+                  <TableColumn prefWidth="96.0" text="Yn" />
+                  <TableColumn prefWidth="174.0" text="f(Xn, Yn)" />
+                  <TableColumn prefWidth="185.0" text="f(Xn, Yn)h" />
+                  <TableColumn prefWidth="198.0" text="Yn+f(Xn, Yn)h" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
